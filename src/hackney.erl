@@ -337,7 +337,7 @@ request(Method, URL, Headers, Body, Options)
 %% @doc send a request using the current client state and pass new
 %% options to it.
 send_request(Ref, Req, Options) ->
-    ok = setopts(Ref, Options),
+    _Client = setopts(Ref, Options),
     send_request(Ref, Req).
 
 %% @doc send a request using the current client state
